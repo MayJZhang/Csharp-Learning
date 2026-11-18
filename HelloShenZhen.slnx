@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Basic02/Basic02_DataType.csproj" Id="8e19cc25-e2d4-4309-a986-059d9f0eed3e" />
+  <Project Path="Basic03_KeyWordStatement/Basic03_KeyWordStatement.csproj" Id="313a2e4e-8970-493d-bf01-8665c874ae0d" />
+  <Project Path="CsharpLearn/Basic01_CodeStructure.csproj" Id="17b9ab85-a37e-40c2-8060-65ff5d138d6d" />
+  <Project Path="HomeWork/HomeWork.csproj" Id="64164e8e-31ce-4fac-88ea-197d5c045036" />
+</Solution>
