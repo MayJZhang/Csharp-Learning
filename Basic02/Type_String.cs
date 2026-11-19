@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Text;
 
 namespace Basic02
 {
@@ -6,6 +8,7 @@ namespace Basic02
     {
         public Type_String()
         {
+            #region string字符串的使用
             //字符串的使用
             //1、字符串的截取 Substring
             string str1 = "今天是晴天";
@@ -85,6 +88,56 @@ namespace Basic02
             Console.WriteLine(string.IsNullOrWhiteSpace(str19));//true
             Console.WriteLine(string.IsNullOrEmpty(str18));//true
             Console.WriteLine(string.IsNullOrEmpty(str19));//false
+            #endregion
+
+            #region string和StringBuilder区别
+            //string类型的方法会创建新的string对象，不会改变原有对象
+            //创建对象会占用系统内存资源，消耗时间
+            //一旦创建string对对象就不能修改
+            //如果需要大量修改时，可使用StringBuilder类
+            string str20 = "今天是晴天";
+            string str21 = str20.Substring(0, 2);//创建新的对象
+            string str22 = str20 + "balabala";//创建新对象
+            str20 = str22;//传引用，此时两个指向同一个
+            str22 = "新的值";//并没有影响str20。赋值操作会创建新的string对象
+            //StringBuilder是引用类型，进行大量的字符串操作时建议使用
+            //不创建实例，只在内存堆里修改
+            StringBuilder sb = new StringBuilder("今天下课直接出去玩");
+            StringBuilder builder = sb.Append("，记得先去取钱");//方法不会创建新的实体堆
+            Console.WriteLine(sb == builder);// true，指向的是同一个引用
+            Console.WriteLine($"{sb}***{builder}");
+            sb.Remove(0, 2);
+            sb.Replace("出去", "考虑一下再出去");
+            sb.Insert(0,"今天还是明天");
+            string str23 = sb.ToString();
+            Console.WriteLine(str23);
+
+            #endregion
+
+            #region string和StringBuiler性能比较
+            string str24 = "";
+            Stopwatch stopwatch = Stopwatch.StartNew();//   创建实例并清零开始计时
+            for (int i = 0; i < 500; i++)
+            {
+                str24 += "abc";
+            }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);// 0
+            Console.WriteLine(stopwatch.ElapsedTicks);// 5101 耗时远大于StringBuilder
+            Console.WriteLine(stopwatch.Elapsed);
+
+            StringBuilder stringBuilder = new StringBuilder();
+            stopwatch.Restart();//  清零重新开始计时
+            for (int i = 0; i < 500; i++)
+            {
+                stringBuilder.Append("abc");
+            }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);// 0
+            Console.WriteLine(stopwatch.ElapsedTicks);// 142 耗时远小于string
+            Console.WriteLine(stopwatch.Elapsed);
+            stopwatch.Reset();// 清零
+            #endregion
         }
     }
 }
