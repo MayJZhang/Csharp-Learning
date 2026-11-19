@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Basic02
 {
@@ -43,10 +39,52 @@ namespace Basic02
             Console.WriteLine(str10.IndexOf("天"));//  2，默认匹配到第一个就返回
             Console.WriteLine(str10.IndexOf("天", 5));// 7，从指定索引开始查找
             Console.WriteLine(str10.LastIndexOf("天"));// 12 从最后面开始找
-            //7、判断是否以 某元素开头 StartWith 或者结尾 EndWith
+            //7、判断是否以 某元素开头 StartWith 或者结尾 EndsWith
+            string str11 = "好好学习，天天向上";
+            Console.WriteLine(str11.StartsWith("好好"));
+            Console.WriteLine(str11.EndsWith("向上"));
 
             //8、转大写 转小写
+            string str12 = "12ABCD编程";
+            Console.WriteLine(str12.ToUpper());// 12ABCD编程
+            Console.WriteLine(str12.ToLower());// 12abcd编程
 
+            //9、把字符串数字按指定分隔符连接成一个字符串 Join
+            string[] strs = new string[] { "红楼梦", "三国演义", "西游记" };
+            string str13 = string.Join("，", strs);
+
+            //10、字符串分割 Split
+            string str14 = "红楼梦，三国 演义，西游记";
+            string[] separator = new string[] { "，", "|", "*", " " };
+            // 数组做参数直接放进去，RemoveEmptyEntries返回值不包含空字符
+            string[] strs2 = str14.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var item in strs2)
+            {
+                Console.WriteLine(item);
+
+            }
+            /*output:
+             * 红楼梦
+             * 三国
+             * 演义
+             * 西游记*/
+
+
+            //11、插入Insert
+            string str15 = "今天嫁给我";
+            string str16 = str15.Insert(2, "你要");// 从给定索引位置插入指定内容
+            Console.WriteLine(str16);
+
+
+            //12、判断字符串非空
+            string str17 = null;//没有实体堆
+            string str18 = "";//有实体但没数据
+            string str19 = "    ";//有实体堆但是堆内是不可见字符
+            Console.WriteLine(string.IsNullOrWhiteSpace(str17));//true
+            Console.WriteLine(string.IsNullOrWhiteSpace(str18));//true
+            Console.WriteLine(string.IsNullOrWhiteSpace(str19));//true
+            Console.WriteLine(string.IsNullOrEmpty(str18));//true
+            Console.WriteLine(string.IsNullOrEmpty(str19));//false
         }
     }
 }
