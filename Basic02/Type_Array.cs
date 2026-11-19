@@ -39,6 +39,10 @@ namespace Basic02
             Array.Sort(ints);
             Array.Reverse(ints);//反转
             #endregion
+
+            #region 二维数组
+            int[] intArr1 = new int[] {1,2,3,4};
+            #endregion
         }
     }
 }
