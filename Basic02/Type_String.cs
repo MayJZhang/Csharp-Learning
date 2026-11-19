@@ -26,8 +26,14 @@ namespace Basic02
             string str7 = str5.Replace("冬天", "000");// 如果没有匹配到旧字符，则不替换
 
             //4、移除字符串某个元素 Remove
+            string str8 = "小明小红今天会过来！";
+            Console.WriteLine(str8.Remove(2));//  小明
+            Console.WriteLine(str8.Remove(2, 2));//  小明今天会过来！
 
             //5、提出字符串左右两边的空格 Trim
+
+            //6、查找或定位到指定元素的位置 IndexOf   如果没有，就返回-1
+
         }
     }
 }
