@@ -32,6 +32,36 @@ namespace Basic03_KeyWordStatement
             long resUserData = userData ^ key;//再次异或就能还原
             Console.WriteLine($"已还原{userData}");
             #endregion
+            #region  进制运算
+            //进制运算：&按位与（逻辑与AND），|按位或（逻辑或OR），^按位异或，~按位取反，<<左移，>>右移
+
+            int x = 5; //二进制表示为0000 0101
+            int y = 3; //二进制表示为0000 0011
+            int and = x & y; //按位与，结果为0000 0001，即1。都为1，结果才为1
+            int or = x | y; //按位或，结果为0000 0111，即7。只要有一个为1，结果就为1
+            int xor = x ^ y; //按位异或，结果为0000 0110，即6。有且仅有一个是1，一个为0，结果就为1
+            int not = ~x; //按位取反，结果为1111 1010，即-6
+            int leftShift = x << 1; //左移一位，结果为0000 1010，即10
+            int rightShift = x >> 1; //右移一位，结果为0000 0010，即2
+
+            #endregion
+
+            #region 逻辑运算
+            //逻辑运算：&&逻辑与，||逻辑或，!逻辑非
+            //关系运算符：== 等于，!= 不等于，> 大于，< 小于，>= 大于等于，<= 小于等于。结果为bool类型
+            //逻辑运算符的优先级高于关系运算符
+            //逻辑运算符的短路特性：&&和||都是短路运算符，&&左边的表达式为false时，右边的表达式不会被计算
+            //||左边的表达式为true时，右边的表达式不会被计算
+            //异或运算符^没有短路特性，左右两边的表达式都会被计算
+            Console.WriteLine(true ^ true);    // output: False
+            Console.WriteLine(true ^ false);   // output: True
+            Console.WriteLine(false ^ true);   // output: True
+            Console.WriteLine(false ^ false);  // output: False
+            //三元运算符：条件运算符 ? :，根据条件表达式的结果选择执行的表达式。
+            bool condition = new Random().NextDouble() > 0.5;
+            int cond = condition ? 12 : 0; //condition为true，x为12，否则为0
+            //条件运算符可以嵌套使用 a? b : (c? d : e) 但可读性较差，建议使用if-else语句代替。
+            #endregion
 
             #region 位运算 >>、<<、&、^在上位机中的使用
             //上位机开发中常用场景：根据位运算进行信号判定或者权限判定

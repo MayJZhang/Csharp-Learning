@@ -24,7 +24,8 @@ namespace Basic02
 
             new BasicTypes();
 
-            new Type_String();
+            //new Type_String();
+            new Type_Array();
         }
     }
 }
