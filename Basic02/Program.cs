@@ -23,6 +23,8 @@ namespace Basic02
             Console.WriteLine(sT1.B);//333333
 
             new BasicTypes();
+
+            new Type_String();
         }
     }
 }

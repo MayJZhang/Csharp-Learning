@@ -30,9 +30,22 @@ namespace Basic02
             Console.WriteLine(str8.Remove(2));//  小明
             Console.WriteLine(str8.Remove(2, 2));//  小明今天会过来！
 
-            //5、提出字符串左右两边的空格 Trim
+            //5、提出字符串左右两边的空格 Trim。中间的空格不会去掉
+            string str9 = "  今天的天气真好    心情也不错   ";
+            Console.WriteLine(str9.Trim());//今天的天气真好    心情也不错
 
             //6、查找或定位到指定元素的位置 IndexOf   如果没有，就返回-1
+            string str10 = "\"春天散步，夏天看海，秋天属落叶\"";
+            int num1 = str10.IndexOf("春天");
+            Console.WriteLine(num1);//  1
+            int num2 = str10.IndexOf("冬天");
+            Console.WriteLine(num2);//  -1，没有匹配到
+            Console.WriteLine(str10.IndexOf("天"));//  2，默认匹配到第一个就返回
+            Console.WriteLine(str10.IndexOf("天", 5));// 7，从指定索引开始查找
+            Console.WriteLine(str10.LastIndexOf("天"));// 12 从最后面开始找
+            //7、判断是否以 某元素开头 StartWith 或者结尾 EndWith
+
+            //8、转大写 转小写
 
         }
     }
