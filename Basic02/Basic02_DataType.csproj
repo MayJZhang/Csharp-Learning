@@ -48,7 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BasicTypes.cs" />
     <Compile Include="Type_Array.cs" />
+    <Compile Include="Type_Class.cs" />
     <Compile Include="Type_Enum.cs" />
+    <Compile Include="Type_List.cs" />
     <Compile Include="Type_String.cs" />
     <Compile Include="Type_Struct.cs" />
   </ItemGroup>
