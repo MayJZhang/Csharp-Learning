@@ -10,6 +10,7 @@ namespace Basic04_Function
     {
         static void Main(string[] args)
         {
+            new Function_Delegate();
         }
     }
 }
