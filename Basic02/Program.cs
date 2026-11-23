@@ -10,22 +10,24 @@ namespace Basic02
     {
         static void Main(string[] args)
         {
-            Type_Struct ts = new Type_Struct() { A = 20, B = "1111"};
-            ST sT = new ST { A = 15, B ="2222"};
+            //Type_Struct ts = new Type_Struct() { A = 20, B = "1111"};
+            //ST sT = new ST { A = 15, B ="2222"};
 
-            Type_Struct ts2 = ts;
-            ts2.A = 16;
-            Console.WriteLine(ts.A);//16
-            Console.WriteLine(ts2.A);//16
-            ST sT1 = sT;
-            sT1.B = "333333";
-            Console.WriteLine(sT.B);//2222
-            Console.WriteLine(sT1.B);//333333
+            //Type_Struct ts2 = ts;
+            //ts2.A = 16;
+            //Console.WriteLine(ts.A);//16
+            //Console.WriteLine(ts2.A);//16
+            //ST sT1 = sT;
+            //sT1.B = "333333";
+            //Console.WriteLine(sT.B);//2222
+            //Console.WriteLine(sT1.B);//333333
 
-            new BasicTypes();
+            //new BasicTypes();
 
-            //new Type_String();
-            new Type_Array();
+            ////new Type_String();
+            //new Type_Array();
+
+            new Type_Class();
         }
     }
 }

@@ -14,12 +14,12 @@ namespace Basic04_Function
                 int x = int.Parse("abc");
                 return a;
             }
-            catch (FormatException ex)
+            catch (FormatException ex)//异常捕获从上到下依次匹配，匹配后下面的不再捕捉，因此异常要先具体后宽泛
             {
                 Console.WriteLine($"格式错误: {ex.Message}");
                 return a;
                 //throw ex;//不return可以继续抛出，但这样会重置堆栈跟踪，导致丢失原始的异常抛出位置
-                //throw; //   这样会保留原始堆栈
+                //throw; //   这样会保留原始堆栈，如果上一层还有try-cache还会捕捉到
             }
             catch (Exception)// 不需要异常对象时可以不用写变量名
             {
