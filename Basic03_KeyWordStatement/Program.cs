@@ -20,7 +20,8 @@ namespace Basic03_KeyWordStatement
             //Console.WriteLine(args[4]); //不存在时会报异常System.IndexOutOfRangeException索引超出范围
             #endregion
 
-            new Operator();
+            //new Operator();
+            new Regular_Expression();
         }
     }
 }

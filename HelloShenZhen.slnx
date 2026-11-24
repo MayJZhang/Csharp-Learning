@@ -3,6 +3,7 @@
   <Project Path="Basic03_KeyWordStatement/Basic03_KeyWordStatement.csproj" Id="313a2e4e-8970-493d-bf01-8665c874ae0d" />
   <Project Path="Basic04_Function/Basic04_Function.csproj" Id="046f3179-b94d-42f7-9514-c3a6b764cde4" />
   <Project Path="Basic05_Custom_DLL/Basic05_Custom_DLL.csproj" Id="4f94056f-0c29-481c-bb1f-32bee265f354" />
+  <Project Path="Basic06_DesignPattern/Basic06_DesignPattern.csproj" Id="ce9e91f6-0241-4b33-8ad3-bfe5fdf1ca01" />
   <Project Path="CsharpLearn/Basic01_CodeStructure.csproj" Id="17b9ab85-a37e-40c2-8060-65ff5d138d6d" />
   <Project Path="HomeWork/HomeWork.csproj" Id="64164e8e-31ce-4fac-88ea-197d5c045036" />
 </Solution>
